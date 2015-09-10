@@ -5,7 +5,14 @@
   <body>
     <h1>Emerging Adulthood</h1>
     <h2>A graduating senior's perspective on becoming an adult in the digital age</h2>
-    <p>Hi there!</p>
-    <em>It works!</em>
+    <div>
+      {% for post in posts %}
+        <div>
+            <p>published: {{ post.published_date }}</p>
+            <h1><a href="">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaks }}</p>
+       </div>
+      {% endfor %}
+    </div>
   </body>
 </html>
